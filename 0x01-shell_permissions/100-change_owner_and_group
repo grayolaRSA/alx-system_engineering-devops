@@ -1,2 +1,3 @@
 #!/bin/bash
 chmod u=vincent g=staff ./
+chown vincent:staff ./
