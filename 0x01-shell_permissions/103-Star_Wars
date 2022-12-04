@@ -1,2 +1,2 @@
 #!/bin/bash
-u+x Star_Wars_IV
+chmod +x Star_Wars_IV
