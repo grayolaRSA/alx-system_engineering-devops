@@ -1,1 +1,2 @@
-#!/bin/bash 4-lastlines 5-firstlines 6-third_line
+#!/bin/bash
+cat /etc/passwd /etc/hosts
