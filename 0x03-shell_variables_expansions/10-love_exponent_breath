@@ -1,2 +1,2 @@
 #!/bin/bash 11-binary_to_decimal
-echo $(($BREATH**$LOVE))
+echo $((BREATH**LOVE))
