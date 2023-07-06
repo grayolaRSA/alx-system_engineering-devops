@@ -2,7 +2,7 @@ Host github.com
   AddKeysToAgent yes
   IdentityFile ~/.ssh/id_ed25519
 
-Host ubuntu@34.224.63.152
+Host 34.224.63.152
   AddKeysToAgent yes
   IdentityFile ~/.ssh/school
   PasswordAuthentication no
