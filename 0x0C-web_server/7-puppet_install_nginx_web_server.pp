@@ -1,4 +1,5 @@
-# Installs a Nginx server
+# automates all the bash scripts in puppet file
+# installs nginx server | adds 300 and 400 error codes
 
 exec {'install':
   provider => shell,
