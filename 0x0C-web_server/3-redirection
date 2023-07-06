@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# installs Nginx server, redirects /redirect_me and customizes 404 not found
+# installs Nginx server
+# redirects according to redirect_me path
+# code 300 error
 
 apt-get update
 apt-get -y install nginx
