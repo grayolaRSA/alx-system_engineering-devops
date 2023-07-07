@@ -5,6 +5,6 @@ apt-get -y install apache2
 
 sudo mkdir /var/www/html
 sudo touch /var/www/html/index.html
-sudo echo "Hello Holberton!" > /var/www/html/index.html
+echo "Hello Holberton!" | sudo tee /var/www/html/index.html
 
 service apache2 restart
