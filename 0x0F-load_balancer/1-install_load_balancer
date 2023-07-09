@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# configures load balancer for the 2 servers
+# installs and configures load balancer for 2 web servers
 
 sudo apt-get -y update
 sudo apt-get install --no-install-recommends software-properties-common
