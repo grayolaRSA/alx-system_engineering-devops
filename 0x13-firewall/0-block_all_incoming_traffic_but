@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Installs firewall on web servers
+#+    Blocks all incoming traffic except
+#+    Port 22(SSH)
+#++  Port 443(HTTP SSL)
+#+++ Port 80(HTTP)
+
+sudo apt-get update
+sudo apt-get install -y ufw
+
+sudo ufw default allow outgoing
+sudo ufw deny incoming
+sudo ufw allow ssh
+sudo ufw allow 443
+sudo ufw allow 80
+sudo ufw enable
+
+sudo service ufw restart
