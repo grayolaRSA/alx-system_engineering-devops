@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#script to dump database to file and create tarball from it
+
+#get current date
+current_date=$(date +%d-%m-%Y)
+
+#set filenames
+dump_file="backup.sql"
+archive_file="${current_date}.tar.gz"
+
+#MySQL credentials
+mysql_user="root"
+mysql_password="$1"
+
+#create dump file
+mysqldump -u "$mysql_user" -p"$mysql_password" --all-databases | sudo tee "$dump_file"
+
+#create compressed archive
+tar -czvf "$archive_file" "$dump_file"
