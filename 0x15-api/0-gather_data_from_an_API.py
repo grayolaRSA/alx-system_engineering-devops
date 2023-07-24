@@ -1,24 +1,25 @@
 #!/usr/bin/python3
-"""returns info about to-do list of employee using REST API"""
-
-from flask import Flask, request, jsonify
-
-app = Flask(__name__)
-
-@app.route('/todo/<user_id>'
-def user_todo(user_id):
-           """route to get user data"""
-           user_data = {
-               "user_id": user_id,
-               "EMPLOYEE_NAME": "John Doe",
-           }
-
-           extra = request.args.get("extra")
-           if extra:
-           user_data["extra"] = extra
-
-           return jsonify(user_data), 200
+""" Python script that gets employee todo data"""
+import requests
+import sys
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    url = 'https://jsonplaceholder.typicode.com/'
+
+    user = '{}users/{}'.format(url, sys.argv[1])
+    res = requests.get(user)
+    json_o = res.json()
+    print("Employee {} is done with tasks".format(json_o.get('name')), end="")
+
+    todos = '{}todos?userId={}'.format(url, sys.argv[1])
+    res = requests.get(todos)
+    tasks = res.json()
+    l_task = []
+    for task in tasks:
+        if task.get('completed') is True:
+            l_task.append(task)
+
+    print("({}/{}):".format(len(l_task), len(tasks)))
+    for task in l_task:
+        print("\t {}".format(task.get("title")))
