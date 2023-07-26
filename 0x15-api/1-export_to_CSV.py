@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" python script that uses API to obtain employee data """
+"""python script that uses API and inputs it into csv file """
 import csv
 import requests
 import sys
