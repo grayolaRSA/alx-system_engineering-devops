@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""python script that uses API and inputs it into csv file """
+""" python script that uses API and inputs it into csv file """
+
 import csv
 import requests
 import sys
@@ -26,10 +27,9 @@ if __name__ == "__main__":
 
     filename = '{}.csv'.format(userid)
     with open(filename, mode='w') as employee_file:
-        file_writer = csv.writer(employee_file,
-                                     delimiter=',',
-                                     quotechar='"',
-                                     quoting=csv.QUOTE_ALL)
+        file_writer = csv.writer(employee_file, delimiter=',',
+                                 quotechar='"',
+                                 quoting=csv.QUOTE_ALL)
         for task in l_task:
             file_writer.writerow(task)
 
