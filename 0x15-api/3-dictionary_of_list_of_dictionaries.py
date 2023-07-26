@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Python script that uses an API to get all user data and output it to a JSON file.
+Python script that uses an API
+ to get all user data and output it to a JSON file.
 """
 
 import csv
@@ -37,5 +38,3 @@ if __name__ == "__main__":
     fileName = 'todo_all_employees.json'
     with open(fileName, mode='w') as j:
         json.dump(dic_t, j)
-
-    print(f"Data has been successfully saved to {fileName}.")
