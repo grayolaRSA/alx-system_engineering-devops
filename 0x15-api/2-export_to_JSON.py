@@ -24,9 +24,8 @@ if __name__ == "__main__":
     for task in tasks:
         dict_tasks = {"task": task.get('title'),
                       "completed": task.get('completed'),
-                     "username": name}
+                      "username": name}
         l_task.append(dict_tasks)
-
 
         dic_t = {str(userid): l_task}
         fileName = f'{userid}.json'
