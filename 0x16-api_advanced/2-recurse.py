@@ -1,14 +1,13 @@
 #!/usr/bin/python3
 """
-Function that queries the Reddit API and prints
-the top ten hot posts of a subreddit
+Module for the top ten hot posts of a subreddit
 """
 import requests
 import sys
 
 
 def add_title(hot_list, hot_posts):
-    """ Adds item into a list """
+    """ Method to add items onto a list """
     if len(hot_posts) == 0:
         return
     hot_list.append(hot_posts[0]['data']['title'])
@@ -27,7 +26,7 @@ def recurse(subreddit, hot_list=[], after=None):
         'after': after
     }
 
-    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
+    url = (f"https://www.reddit.com/r/{subreddit}/hot.json")
     res = requests.get(url,
                        headers=headers,
                        params=params,
