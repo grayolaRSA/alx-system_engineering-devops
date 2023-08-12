@@ -7,7 +7,6 @@ import sys
 def number_of_subscribers(subreddit):
     """method to retrieve the number of reddit subcribers"""
 
-
     # Create a Reddit instance
     reddit = praw.Reddit(
         client_id='F3jxoROf0m2Phw3to2QuLA',
@@ -24,6 +23,7 @@ def number_of_subscribers(subreddit):
     subscribers_count = subreddit.subscribers
 
     return subscribers_count
+
 
 if __name__ == "__main__":
     subreddit_name = sys.argv[1]
