@@ -6,7 +6,7 @@ pids=$(pgrep gunicorn)
 if [ -n "$pids" ]; then
     echo "Reloading Gunicorn processes: $pids"
     for pid in $pids; do
-        kill -HUP "$pid"
+        kill -TERM "$pid"
     done
 else
     echo "No Gunicorn processes found."
