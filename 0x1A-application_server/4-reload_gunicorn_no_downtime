@@ -4,7 +4,7 @@
 pids=$(pgrep gunicorn)
 
 if [ -n "$pids" ]; then
-    kill -HUP $pids
+    kill -HUP "$pids"
 else
     echo "No Gunicorn processes found."
 fi
